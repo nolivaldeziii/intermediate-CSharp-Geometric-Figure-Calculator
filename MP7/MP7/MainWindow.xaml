@@ -1,0 +1,93 @@
+﻿<Window x:Class="MP7_ValdezIII.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MP7_ValdezIII"
+        mc:Ignorable="d"
+        Title="MP7_ValdezIII" Height="668.439" Width="986.937" ResizeMode="NoResize" Background="{x:Null}" AllowsTransparency="True" WindowStyle="None" KeyUp="Window_KeyUp" Icon="initial logo.ico">
+    <Grid Loaded="Grid_Loaded" Margin="-62,-58,-48,-122">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="7*"/>
+            <ColumnDefinition Width="672*"/>
+            <ColumnDefinition Width="766*"/>
+        </Grid.ColumnDefinitions>
+        <Image x:Name="image2" Grid.Column="1" HorizontalAlignment="Left" Height="434" Margin="252,202,0,0" VerticalAlignment="Top" Width="576" Grid.ColumnSpan="2" Source="Images/piplcd.png"/>
+        <Image x:Name="image" Grid.ColumnSpan="2" HorizontalAlignment="Left" Height="671" Margin="56,95,0,0" VerticalAlignment="Top" Width="973" Source="Images/Pip-Boy_3000.png" Stretch="UniformToFill" Grid.Column="1">
+            <Image.Effect>
+                <DropShadowEffect ShadowDepth="4"/>
+            </Image.Effect>
+        </Image>
+        <Image x:Name="radio_i_1" HorizontalAlignment="Left" Height="64" Margin="495,532,0,0" VerticalAlignment="Top" Width="53" Source="Images/radio_off.png" MouseLeftButtonUp="radio_i_1_MouseLeftButtonUp" Grid.Column="1" Grid.ColumnSpan="2" MouseEnter="radio_i_1_MouseEnter" MouseLeave="radio_i_1_MouseLeave"/>
+        <Image x:Name="radio_i_perimeter" HorizontalAlignment="Left" Height="64" Margin="45,532,0,0" VerticalAlignment="Top" Width="53" Source="Images/radio_off.png" RenderTransformOrigin="0.702,0.577" MouseUp="radio_i_2_MouseUp" Grid.Column="2" IsEnabledChanged="radio_i_perimeter_IsEnabledChanged" MouseEnter="radio_i_perimeter_MouseEnter" MouseLeave="radio_i_perimeter_MouseLeave"/>
+        <Image x:Name="radio_i_circumference" HorizontalAlignment="Right" Height="64" Margin="0,532,422,0" VerticalAlignment="Top" Width="54" Source="Images/radio_off.png" MouseUp="radio_i_3_MouseUp" Grid.Column="2" IsEnabledChanged="radio_i_circumference_IsEnabledChanged" MouseEnter="radio_i_circumference_MouseEnter" MouseLeave="radio_i_circumference_MouseLeave"/>
+        <Image x:Name="image_knob" Grid.Column="1" HorizontalAlignment="Left" Height="58" Margin="163,469,0,0" VerticalAlignment="Top" Width="62" Source="Images/Knob.png" RenderTransformOrigin="0.5,0.5" MouseUp="image1_MouseUp" MouseEnter="image_knob_MouseEnter" MouseLeave="image_knob_MouseLeave">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="47.861"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+        </Image>
+        <TextBox x:Name="textBox_var1" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="402,469,0,0" TextWrapping="Wrap" Text="Variable 1" VerticalAlignment="Top" Width="79" Background="#FF0E2517" Foreground="#FF97E48F" LostFocus="textBox_LostFocus" GotFocus="textBox_var1_GotFocus" TextChanged="textBox_var1_TextChanged"/>
+        <TextBox x:Name="textBox_var2" Grid.Column="1" HorizontalAlignment="Left" Height="24" Margin="495,469,0,0" TextWrapping="Wrap" Text="Variable 2" VerticalAlignment="Top" Width="79" Grid.ColumnSpan="2" Background="#FF0D2015" Foreground="#FF93D68C" LostFocus="textBox_Copy_LostFocus" GotFocus="textBox_var2_GotFocus"/>
+        <TextBox x:Name="textBox_var3" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="78,469,0,0" TextWrapping="Wrap" Text="Variable 3" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.92,0.458" Background="#FF0E2015" Foreground="#FF96D890" LostFocus="textBox_Copy1_LostFocus" GotFocus="textBox_var3_GotFocus"/>
+        <TextBox x:Name="textBox_var4" Grid.Column="2" HorizontalAlignment="Left" Height="24" Margin="173,469,0,0" TextWrapping="Wrap" Text="Variable 4" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.92,0.458" Background="#FF0D1D14" Foreground="#FFA9E8A3" LostFocus="textBox_Copy2_LostFocus" GotFocus="textBox_var4_GotFocus"/>
+        <Image x:Name="image_shapeVisualizer" Grid.Column="1" HorizontalAlignment="Left" Height="159" Margin="403,227,0,0" VerticalAlignment="Top" Width="122" Source="Images/circle.png" Loaded="image3_Loaded" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2">
+            <Image.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Image.RenderTransform>
+            <Image.Effect>
+                <DropShadowEffect ShadowDepth="10"/>
+            </Image.Effect>
+        </Image>
+        <Label x:Name="label_shapevisualizer" Content="Circles" Grid.Column="1" HorizontalAlignment="Center" Margin="370,387,527,0" VerticalAlignment="Top" Foreground="#FF46C554" Width="195" FontSize="21.333" FontWeight="Bold" Height="72" HorizontalContentAlignment="Center" Grid.ColumnSpan="2">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label" Content="Area" Grid.Column="1" HorizontalAlignment="Left" Margin="503,512,0,0" VerticalAlignment="Top" Foreground="#FF7C7032" FontWeight="Bold" FontSize="13.333" Grid.ColumnSpan="2" FontFamily="Arial">
+            <Label.Effect>
+                <BlurEffect Radius="1" RenderingBias="Quality"/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label_Copy" Content="Perim..." Grid.Column="2" HorizontalAlignment="Left" Margin="38,512,0,0" VerticalAlignment="Top" Foreground="#FF7C7032" FontWeight="Bold" FontSize="13.333" FontFamily="Arial">
+            <Label.Effect>
+                <BlurEffect Radius="1" RenderingBias="Quality"/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label_Copy1" Content="Circum..." Grid.Column="2" HorizontalAlignment="Left" Margin="101,512,0,0" VerticalAlignment="Top" Foreground="#FF7C7032" FontWeight="Bold" FontSize="13.333" FontFamily="Arial">
+            <Label.Effect>
+                <BlurEffect Radius="1" RenderingBias="Quality"/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label_system_message" Content="System Messages appears here" Grid.Column="2" HorizontalAlignment="Left" Margin="55,397,0,0" VerticalAlignment="Top" Foreground="#FF46C554" Height="49" Width="241">
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Label x:Name="label_answer" Content="{}{The Answer}" Grid.Column="2" HorizontalAlignment="Left" Margin="55,256,0,0" VerticalAlignment="Top" Height="131" Width="230" FontSize="32" Foreground="#FF399F45"/>
+        <Label x:Name="label_var1" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="402,446,0,0" VerticalAlignment="Top" Width="79" Foreground="#FF97E26D"/>
+        <Label x:Name="label_var2" Content="Label" Grid.Column="1" HorizontalAlignment="Left" Margin="495,446,0,0" VerticalAlignment="Top" Width="79" Grid.ColumnSpan="2" Foreground="#FF97E26D"/>
+        <Label x:Name="label_var3" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="78,446,0,0" VerticalAlignment="Top" Width="79" Foreground="#FF97E26D"/>
+        <Label x:Name="label_var4" Content="Label" Grid.Column="2" HorizontalAlignment="Left" Margin="173,446,0,0" VerticalAlignment="Top" Width="79" Foreground="#FF97E26D"/>
+        <Image x:Name="image_power" Grid.Column="1" HorizontalAlignment="Left" Height="90" Margin="161,194,0,0" VerticalAlignment="Top" Width="106" Source="Images/power_off.png" MouseUp="image1_MouseUp_1" MouseEnter="image1_MouseEnter" MouseLeave="image_power_MouseLeave"/>
+        <Label x:Name="label_var2_Copy" Content="MP7__ValdezIII" Grid.Column="2" HorizontalAlignment="Left" Margin="208,222,0,0" VerticalAlignment="Top" Width="86" Foreground="#FF97E26D" RenderTransformOrigin="0.5,0.5">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.195"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+    </Grid>
+</Window>
